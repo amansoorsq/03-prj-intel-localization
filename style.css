@@ -1,0 +1,121 @@
+/* Hero Section Styles */
+header {
+  background: linear-gradient(90deg, #0071c5 0%, #00a6d6 100%); /* Intel blue gradient */
+  color: #fff;
+  padding: 40px 0 30px 0;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12)); /* subtle shadow for logo */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto 10px auto;
+  color: #e0f7fa;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* Timeline Section Styles */
+section {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  overflow-x: auto;
+  padding: 30px 20px 20px 20px;
+  background: #f4faff;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+section > div {
+  flex: 0 0 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,113,197,0.08);
+  border: 2px solid #e3f2fd;
+  padding: 22px 18px 18px 18px;
+  transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s cubic-bezier(.4,2,.3,1), filter 0.25s;
+  position: relative;
+  cursor: pointer;
+  color: #003366;
+  scroll-snap-align: start;
+  will-change: transform, box-shadow, filter;
+}
+
+section > div:hover {
+  transform: translateY(-12px) scale(1.045) rotate(-1.5deg);
+  box-shadow: 0 12px 32px rgba(0,113,197,0.22), 0 2px 8px rgba(0,0,0,0.08);
+  filter: brightness(1.04) saturate(1.08);
+  z-index: 2;
+}
+
+section h2 {
+  font-size: 1.3rem;
+  color: #0071c5;
+  margin-bottom: 4px;
+}
+
+section h3 {
+  font-size: 1.1rem;
+  color: #00a6d6;
+  margin-bottom: 10px;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #b3e5fc;
+  display: block;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 1rem;
+  color: #003366;
+  margin-bottom: 0;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+/* Hide extra details by default, show on hover */
+section > div p {
+  max-height: 48px;
+  overflow: hidden;
+  transition: max-height 0.3s, opacity 0.3s;
+}
+section > div:hover p {
+  max-height: 400px;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+    gap: 24px;
+    overflow-x: visible;
+    padding: 18px 6px 10px 6px;
+  }
+  section > div {
+    flex: 1 1 100%;
+    margin: 0 auto;
+    max-width: 98vw;
+  }
+}
