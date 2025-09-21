@@ -33,7 +33,7 @@ header p {
 }
 
 /* Timeline Section Styles */
-section {
+.timeline {
   display: flex;
   flex-direction: row;
   gap: 32px;
@@ -44,7 +44,7 @@ section {
   scroll-snap-type: x mandatory;
 }
 
-section > div {
+.timeline > div {
   flex: 0 0 320px;
   background: #fff;
   border-radius: 16px;
@@ -59,26 +59,26 @@ section > div {
   will-change: transform, box-shadow, filter;
 }
 
-section > div:hover {
+.timeline > div:hover {
   transform: translateY(-12px) scale(1.045) rotate(-1.5deg);
   box-shadow: 0 12px 32px rgba(0,113,197,0.22), 0 2px 8px rgba(0,0,0,0.08);
   filter: brightness(1.04) saturate(1.08);
   z-index: 2;
 }
 
-section h2 {
+.timeline h2 {
   font-size: 1.3rem;
   color: #0071c5;
   margin-bottom: 4px;
 }
 
-section h3 {
+.timeline h3 {
   font-size: 1.1rem;
   color: #00a6d6;
   margin-bottom: 10px;
 }
 
-section img {
+.timeline img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -87,7 +87,7 @@ section img {
   margin-bottom: 10px;
 }
 
-section p {
+.timeline p {
   font-size: 1rem;
   color: #003366; /* Darkened for better contrast */
   margin-bottom: 0;
@@ -96,24 +96,24 @@ section p {
 }
 
 /* Hide extra details by default, show on hover */
-section > div p {
+.timeline > div p {
   max-height: 48px;
   overflow: hidden;
   transition: max-height 0.3s, opacity 0.3s;
 }
-section > div:hover p {
+.timeline > div:hover p {
   max-height: 400px;
   opacity: 1;
 }
 
 @media (max-width: 900px) {
-  section {
+  .timeline {
     flex-direction: column;
     gap: 24px;
     overflow-x: visible;
     padding: 18px 6px 10px 6px;
   }
-  section > div {
+  .timeline > div {
     flex: 1 1 100%;
     margin: 0 auto;
     max-width: 98vw;
