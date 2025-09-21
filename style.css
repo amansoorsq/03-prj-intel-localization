@@ -28,7 +28,7 @@ header p {
   font-weight: 400;
   max-width: 600px;
   margin: 0 auto 10px auto;
-  color: #e0f7fa;
+  color: #fff; /* Changed to white for better contrast on blue background */
   text-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
@@ -89,9 +89,9 @@ section img {
 
 section p {
   font-size: 1rem;
-  color: #003366;
+  color: #003366; /* Darkened for better contrast */
   margin-bottom: 0;
-  opacity: 0.85;
+  opacity: 1; /* Removed opacity for full contrast */
   transition: opacity 0.2s;
 }
 
@@ -118,4 +118,28 @@ section > div:hover p {
     margin: 0 auto;
     max-width: 98vw;
   }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #003366; /* Dark blue for contrast */
+  color: #fff; /* White text for readability */
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+}
+
+footer nav a {
+  color: #e0f7fa; /* Light blue links */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer nav a:hover {
+  text-decoration: underline;
 }
